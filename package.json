@@ -1,0 +1,32 @@
+{
+  "name": "actors-js",
+  "version": "1.0.0",
+  "description": "Node.js project with DI and testing",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --passWithNoTests",
+    "lint": "eslint . --ext .ts",
+    "start": "ts-node ./src/test/test.ts",
+    "start:dapr": "dapr run --app-id dapr-example --app-protocol http --app-port 50001 --dapr-http-port 50000 --components-path $HOME/.dapr/components npm run start"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "inversify": "^6.0.2",
+    "reflect-metadata": "^0.2.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.42",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.24",
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3",
+    "@dapr/dapr": "3.3.0"
+  }
+} 
