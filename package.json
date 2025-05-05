@@ -1,6 +1,6 @@
 {
   "name": "actors-js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Node.js project with DI and testing",
   "main": "dist/index.js",
   "scripts": {
@@ -8,6 +8,8 @@
     "test": "jest --passWithNoTests",
     "lint": "eslint . --ext .ts",
     "start": "ts-node ./src/test/test.ts",
+    "version-packages": "changeset version",
+    "release": "changeset publish",
     "start:dapr": "dapr run --app-id dapr-example --app-protocol http --app-port 50001 --dapr-http-port 50000 --components-path $HOME/.dapr/components npm run start"
   },
   "dependencies": {
